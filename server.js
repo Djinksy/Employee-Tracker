@@ -33,8 +33,6 @@ function options() {
                 'Add an employee',
                 'Add a department',
                 'Add a role',
-                'Update employee role',
-                'Delete an employee',
                 'EXIT'
             ]
         }).then(function(answer) {
@@ -56,12 +54,6 @@ function options() {
                     break;
                 case 'Add a role':
                     addRole();
-                    break;
-                case 'Update employee role':
-                    updateRole();
-                    break;
-                case 'Delete an employee':
-                    deleteEmployee();
                     break;
                 case 'EXIT':
                     exitApp();
@@ -196,11 +188,11 @@ function addRole() {
                     name: 'Department',
                     type: 'list',
                     choices: function() {
-                        var deparmentArry = [];
+                        var departmentArry = [];
                         for (let i = 0; i < res.length; i++) {
-                            deptArry.push(res[i].name);
+                            departmentArry.push(res[i].name);
                         }
-                        return deparmentArry;
+                        return departmentArry;
                     },
                 }
             ]).then(function(answer) {
