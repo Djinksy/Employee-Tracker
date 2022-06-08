@@ -101,7 +101,7 @@ function addEmployee() {
             .prompt([{
                     name: 'first_name',
                     type: 'input',
-                    message: "What is the employees fist name? ",
+                    message: "What is the employees first name? ",
                 },
                 {
                     name: 'last_name',
